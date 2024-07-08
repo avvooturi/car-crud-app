@@ -1,6 +1,6 @@
 package storage
 
-import "car-api/pkg/models"
+import "github.com/avvooturi/car-crud-app/pkg/models"
 
 type DB interface {
 	FetchAll() []models.Car
@@ -8,8 +8,4 @@ type DB interface {
 	Create(id string, cars ...models.Car) ([]models.Car, error)
 	Delete(id string) error
 	Update(id string, car models.Car) (models.Car, error)
-}
-
-type arrDB struct {
-	Data map[string] models.Car
 }
